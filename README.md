@@ -2,6 +2,7 @@
 dynamic Arm for Robitc Mischief
 
 
-<video src="videos/actuator_single_bearing.mp4" width="300">asdf</video>
-
-![non working video](videos/actuator_single_bearing.mp4)
+<video width="640" height="360" controls>
+  <source src="videos/actuator_single_bearing.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
