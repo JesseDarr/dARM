@@ -2,7 +2,7 @@
 dynamic Arm for Robitc Mischief
 
 
-(https://github.com/user-attachments/assets/9c17cea2-23e4-4fee-a36b-0583f5eff16b)
+![test](https://github.com/user-attachments/assets/9c17cea2-23e4-4fee-a36b-0583f5eff16b)
 
 
 
