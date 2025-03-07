@@ -7,8 +7,6 @@ Double bearing actuators handle load perpindicular to the rotation axis better, 
 
 Below is an explode animation of each flabor.  Theu should give you a good idea of the sub components involved and are also a good assembly reference.
 
-https://github.com/user-attachments/assets/1fb2f8ce-f004-45af-9165-4a99484ae493
+https://github.com/user-attachments/assets/70e886fa-f724-4e31-8704-7430dc363660
 
-https://github.com/user-attachments/assets/50f1fe47-b45a-43db-b56d-bc32ddc3bf58
-
-
+https://github.com/user-attachments/assets/1fd90e32-2f6b-4316-a088-cb612336ff53
