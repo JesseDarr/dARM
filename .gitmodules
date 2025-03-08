@@ -1,0 +1,3 @@
+[submodule "odrive_tools"]
+	path = odrive_tools
+	url = https://github.com/JesseDarr/dARM_odrive_tools.git
