@@ -28,7 +28,7 @@ What can I say about James.  I've been watching his channel for years.  Initiall
 Another great youtuber.  He focuses on robotic arms, and mostly 3d printed robotic arms.  He covers specifics of design, assembly, and controll over more robot arm designs than I can count.  He also covers ODrives in great detail, including a video that uses a custom modified firmware to increase communication speed for specific queries over CAN.
 
 #### [OpenQDD](https://www.aaedmusa.com/projects/openqdd)
-The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has an excellent [youtube channel](https://www.youtube.com/@aaedmusa). We use the same basic layout of an `8308 motor`, an `ODrive S1`, and a `planetary gearbox`. Our actuators have been redesigned from scatch to increased strength and rigidity, tigheten tolerances, and to have more robust mounting capabilities.
+The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has an excellent [youtube channel](https://www.youtube.com/@aaedmusa). We use the same basic layout of an `8308 motor`, an `ODrive S1`, and a `planetary gearbox`. Our actuators have been redesigned from scatch to increased strength and rigidity, tigheten tolerances, print easier, and to have more robust mounting capabilities.
 
 #### [SSG48 Gripper](https://source-robotics.github.io/SSG48-gripper-docs/page1_about_the_gripper)
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
