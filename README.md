@@ -3,7 +3,7 @@ dARM is a 3d printed 6 DOF robotic arm. Initially I wanted to create a 3d printe
 
 So the dARM journey began. The goal was to design a cheap, powerful, robust, modular, and easily maintained arm from scratch using `ODrive S1` BLDC controllers.  It stands `.975 meters` tall, and can easily hold `5 lbs` in the horizontal position.
 
-As I've itterated through various designs, modularity and maintenance became top priorities.  If any individual component fails, it's modular section can be removed from the larger arm, for easy replacement.
+As I've itterated through various designs, modularity and maintenance became top priorities.  If any individual component fails, its modular section can be removed from the larger arm for easy replacement.
 
 ## Table of Contents
 1. [Inspiration](#inspiration)
