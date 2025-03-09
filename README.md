@@ -16,6 +16,11 @@ Pic or video
 
 ## Inspiration
 
+[SSG48 Gripper](https://source-robotics.github.io/SSG48-gripper-docs/page1_about_the_gripper)
+[OpenQDD (Open Quasi Direct Drive)](https://www.aaedmusa.com/projects/openqdd)
+[James Burton](https://www.youtube.com/@jamesbruton)
+[Skyentific](https://www.youtube.com/@Skyentific)
+
 ## Design
 
 ### Control
