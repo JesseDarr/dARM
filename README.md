@@ -27,9 +27,9 @@ Pic or video
 #### Primary Actuators
 These are the modular building block of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
 
-Double bearing actuators handle load perpindicular to the rotation axis better. They are used in joints that rotates on the Z axis. 
+Double bearing actuators handle load perpindicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
-Single bearing actuators are used in joints that rotate on the X axis.
+Single bearing actuators are used in joints that rotate on the horizontal axis.
 
 Below is an explode animation of each flavor.  They should give you a good idea of the sub components involved and are also a good assembly reference.
 
