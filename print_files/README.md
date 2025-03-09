@@ -7,7 +7,7 @@ All settings, including build plate specific customizations, are in a pro
 file named `dARM`.  
 All plates should be printed in `PLA+`, except the gripper fingers which should be `TPU`.
 
-### dARM.3mf
+## dARM.3mf
 This is the entire robot arm.
 + 36 Plates
 + Plate names are descriptive and include the print count
@@ -19,7 +19,7 @@ Contains:
 + Gripper
 + All subcomponents
 
-### powerBox.3mf
+## powerBox.3mf
 Housing for switching power supply, power monitor and dispaly, and on/off switch.
 + Comming soon
 + Early version
