@@ -23,5 +23,5 @@ Contains:
 Housing for switching power supply, power monitor and dispaly, and on/off switch.
 + Comming soon
 + Early version
- - lid just seats on box
- - relies on it's own weight
+    - lid just seats on box
+    - relies on it's own weight
