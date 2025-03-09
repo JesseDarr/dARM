@@ -9,7 +9,7 @@ Pic or video
     - [Control](#control)
     - [Power](#power)
     - [Mechanical](#mechanical)
-        - [Primary Actiators](#primary-actuators)
+        - [Primary Actuators](#primary-actuators)
         - [Forearm and Differential](#forearm-and-differential)
         - [Gripper](#gripper)
 3. [Assembly](#assembly)
