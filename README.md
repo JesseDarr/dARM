@@ -3,6 +3,17 @@
 Purpose goes here.  
 Pic or video
 
+## Table of Contents
+1. [Inspiration](#inspiration)
+2. [Design](#design)
+    - [Control](#control)
+    - [Power](#power)
+    - [Mechanical](#mechanical)
+        - [Primary Actiators](#primary-actuators)
+        - [Forearm and Differential](#forearm-and-differential)
+        - [Gripper](#gripper)
+3. [Assembly](#assembly)
+
 ## Inspiration
 
 ## Design
@@ -14,7 +25,7 @@ Pic or video
 ### Mechanical
 
 #### Primary Actuators
-Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
+These are the modular building block of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
 
 Double bearing actuators handle load perpindicular to the rotation axis better. They are used in joints that rotates on the Z axis. 
 
@@ -26,8 +37,9 @@ https://github.com/user-attachments/assets/70e886fa-f724-4e31-8704-7430dc363660
 
 https://github.com/user-attachments/assets/1fd90e32-2f6b-4316-a088-cb612336ff53
 
-#### Secondary Actuators
 
 #### Forearm and Differential
 
 #### Gripper
+
+## Assembly
