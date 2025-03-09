@@ -19,7 +19,7 @@ Contains:
 + Gripper
 + All subcomponents
 
-## powerBox.3mf
+### powerBox.3mf
 Housing for switching power supply, power monitor and dispaly, and on/off switch.
 + Comming soon
 + Early version
