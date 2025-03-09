@@ -7,7 +7,12 @@ All settings, including build plate specific customizations, are in a profile na
 All plates should be printed in `PLA+`, except the gripper fingers which should be `TPU`.
 
 ### dARM.3mf
-This is the entire robot arm.  It contains legs, 5 large actuators, the forearm, and the gripper.
+This is the entire robot arm.
 + 36 Plates
-+ Names and print count included
-    - if print count not just print 1
++ Plate names are descriptive and include the print count
+Contains:
++ Legs
++ 5 Large Actuators
++ Forearm
++ Gripper
++ All subcomponents
