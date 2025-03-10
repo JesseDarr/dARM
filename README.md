@@ -52,13 +52,16 @@ Single bearing actuators are used in joints that rotate on the horizontal axis. 
 
 Below is an explode animation of each flavor.  They should give you a good idea of the sub components involved and are also a good assembly reference.
 
-https://github.com/user-attachments/assets/70e886fa-f724-4e31-8704-7430dc363660
+https://github.com/user-attachments/assets/06c78a0a-1a54-4e00-952e-c247763e0280
 
-https://github.com/user-attachments/assets/1fd90e32-2f6b-4316-a088-cb612336ff53
-
+https://github.com/user-attachments/assets/b43786ba-b51d-407c-8697-83d8e092f9be
 
 #### Forearm and Differential
 
+https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
+
 #### Gripper
+
+https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
 ## Assembly
