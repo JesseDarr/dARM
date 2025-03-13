@@ -1,5 +1,5 @@
 # dARM (dynamic Arm for Robitc Mischief)
-dARM is a 3d printed 6 DOF robotic arm. Initially I wanted to create a 3d printed arm as a test of my new `Bambu X1C`, but I quickly found that all of the existing open source projects were smaller and less capable than I wanted.
+dARM is a 3d printed 6 DOF robotic arm. Initially I wanted to create a 3d printed arm as a test of my new `Bambu X1C`. I found most existing projects used stepper motors.  I wanted a better power density.
 
 So the dARM journey began. The goal was to design a cheap, powerful, robust, modular, and easily maintained arm from scratch using `ODrive S1` BLDC controllers.  It stands `.975 meters` tall, and can easily hold `5 lbs` in the horizontal position.
 
