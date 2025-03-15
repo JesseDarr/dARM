@@ -8,21 +8,22 @@ So the dARM journey began. The goal was to design a cheap, powerful, robust, mod
 As I've itterated through various designs, modularity and maintenance became top priorities.  If any individual component fails, its modular section can be removed from the larger arm for easy replacement.
 
 ## Table of Contents
-1. [Inspiration](#inspiration)
+1. [Versions](#versions)
+2. [Inspiration](#inspiration)
     - [James Burton](#james-burton)
     - [Skyentific](#Skyentific)
     - [OpenQDD](#openqdd)
     - [SSG48 Gripper](#ssg48-gripper)
-2. [Design](#design)
+3. [Design](#design)
     - [Control](#control)
     - [Power](#power)
     - [Mechanical](#mechanical)
         - [Primary Actuators](#primary-actuators)
         - [Forearm and Differential](#forearm-and-differential)
         - [Gripper](#gripper)
-3. [Assembly](#assembly)
+4. [Assembly](#assembly)
 
-## Versioning
+## Versions
 Version numbers are determined purley by emotion. Don't ask what SDE stands for.
 
 | Version   | Date          | Notes                             |
