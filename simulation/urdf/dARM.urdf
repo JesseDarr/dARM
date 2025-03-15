@@ -1,0 +1,242 @@
+<?xml version = "1.0" ?>
+<robot name = "dARM">
+
+        <link name = "joint_2">
+            <visual>
+                <origin xyz = "0.038320 -0.215440 -0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/joint_2.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.038320 -0.215440 -0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/joint_2.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.038320 -0.215440 -0.000000" rpy = "0 0 0"/>
+                <mass value = "5.103367"/>
+                <inertia ixx = "0.005134" ixy = "-0.000000" ixz = "-0.000000" iyy = "0.000096" iyz = "-0.000000" izz = "0.005157"/>
+            </inertial>
+        </link>
+        
+        <link name = "forearm">
+            <visual>
+                <origin xyz = "0.029080 -0.472080 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/forearm.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.029080 -0.472080 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/forearm.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.029080 -0.472080 0.000000" rpy = "0 0 0"/>
+                <mass value = "5.899486"/>
+                <inertia ixx = "0.022123" ixy = "0.000349" ixz = "0.000000" iyy = "0.000157" iyz = "0.000000" izz = "0.022229"/>
+            </inertial>
+        </link>
+        
+        <link name = "gripper">
+            <visual>
+                <origin xyz = "0.000000 -0.831601 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/gripper.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.000000 -0.831601 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/gripper.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.000000 -0.831601 0.000000" rpy = "0 0 0"/>
+                <mass value = "1.795107"/>
+                <inertia ixx = "0.013859" ixy = "0.000000" ixz = "-0.000000" iyy = "0.000014" iyz = "-0.000000" izz = "0.013862"/>
+            </inertial>
+        </link>
+        
+        <link name = "joint_1">
+            <visual>
+                <origin xyz = "0.000000 -0.146440 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/joint_1.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.000000 -0.146440 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/joint_1.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.000000 -0.146440 0.000000" rpy = "0 0 0"/>
+                <mass value = "7.650614"/>
+                <inertia ixx = "0.003248" ixy = "-0.000000" ixz = "0.000000" iyy = "0.000399" iyz = "0.000000" izz = "0.003511"/>
+            </inertial>
+        </link>
+        
+        <link name = "joint_3">
+            <visual>
+                <origin xyz = "0.000000 -0.409080 -0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/joint_3.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.000000 -0.409080 -0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/joint_3.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.000000 -0.409080 -0.000000" rpy = "0 0 0"/>
+                <mass value = "2.613954"/>
+                <inertia ixx = "0.005486" ixy = "-0.000028" ixz = "0.000000" iyy = "0.000042" iyz = "0.000000" izz = "0.005478"/>
+            </inertial>
+        </link>
+        
+        <link name = "base_link">
+            <visual>
+                <origin xyz = "0.000000 0.000000 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/base_link.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.000000 0.000000 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/base_link.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.000000 0.000000 0.000000" rpy = "0 0 0"/>
+                <mass value = "33.316480"/>
+                <inertia ixx = "0.003712" ixy = "0.000000" ixz = "0.000000" iyy = "0.006406" iyz = "0.000000" izz = "0.003712"/>
+            </inertial>
+        </link>
+        
+        <link name = "differential">
+            <visual>
+                <origin xyz = "0.041776 -0.809901 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/differential.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "0.041776 -0.809901 0.000000" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/differential.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "0.041776 -0.809901 0.000000" rpy = "0 0 0"/>
+                <mass value = "1.003741"/>
+                <inertia ixx = "0.006597" ixy = "0.000000" ixz = "-0.000000" iyy = "0.000012" iyz = "0.000000" izz = "0.006607"/>
+            </inertial>
+        </link>
+        
+        <link name = "finger_1">
+            <visual>
+                <origin xyz = "-0.050000 -0.919071 -0.003500" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/finger_1.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "-0.050000 -0.919071 -0.003500" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/finger_1.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "-0.050000 -0.919071 -0.003500" rpy = "0 0 0"/>
+                <mass value = "0.268584"/>
+                <inertia ixx = "0.002366" ixy = "-0.000026" ixz = "-0.000000" iyy = "0.000001" iyz = "0.000002" izz = "0.002366"/>
+            </inertial>
+        </link>
+        
+        <link name = "finger_2">
+            <visual>
+                <origin xyz = "-0.050000 -0.919071 -0.003500" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/finger_2.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz = "-0.050000 -0.919071 -0.003500" rpy = "0 0 0"/>
+                <geometry>
+                    <mesh filename = "../meshes/finger_2.stl" scale = "0.001 0.001 0.001"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz = "-0.050000 -0.919071 -0.003500" rpy = "0 0 0"/>
+                <mass value = "0.268584"/>
+                <inertia ixx = "0.002366" ixy = "0.000026" ixz = "-0.000000" iyy = "0.000001" iyz = "-0.000002" izz = "0.002366"/>
+            </inertial>
+        </link>
+        
+        <joint name = "Revolute 10" type = "continuous">
+            <origin xyz = "-0.000000 0.146440 -0.000000" rpy = "0 0 0"/>
+            <parent link = "base_link"/>
+            <child link = "joint_1"/>
+            <axis xyz = "-0.000000 1.000000 -0.000000"/>
+        </joint>
+        
+        <joint name = "Revolute 11" type = "continuous">
+            <origin xyz = "-0.038320 0.069000 0.000000" rpy = "0 0 0"/>
+            <parent link = "joint_1"/>
+            <child link = "joint_2"/>
+            <axis xyz = "-1.000000 0.000000 -0.000000"/>
+        </joint>
+        
+        <joint name = "Revolute 12" type = "continuous">
+            <origin xyz = "0.038320 0.193640 -0.000000" rpy = "0 0 0"/>
+            <parent link = "joint_2"/>
+            <child link = "joint_3"/>
+            <axis xyz = "-0.000000 1.000000 -0.000000"/>
+        </joint>
+        
+        <joint name = "Revolute 13" type = "continuous">
+            <origin xyz = "-0.029080 0.063000 -0.000000" rpy = "0 0 0"/>
+            <parent link = "joint_3"/>
+            <child link = "forearm"/>
+            <axis xyz = "-1.000000 -0.000000 -0.000000"/>
+        </joint>
+        
+        <joint name = "Revolute 14" type = "continuous">
+            <origin xyz = "-0.012696 0.337821 -0.000000" rpy = "0 0 0"/>
+            <parent link = "forearm"/>
+            <child link = "differential"/>
+            <axis xyz = "1.000000 0.000000 0.000000"/>
+        </joint>
+        
+        <joint name = "Revolute 15" type = "continuous">
+            <origin xyz = "0.041776 0.021700 0.000000" rpy = "0 0 0"/>
+            <parent link = "differential"/>
+            <child link = "gripper"/>
+            <axis xyz = "0.000000 -1.000000 0.000000"/>
+        </joint>
+        
+        <joint name = "Slider 16" type = "prismatic">
+            <origin xyz = "0.050000 0.087470 0.003500" rpy = "0 0 0"/>
+            <parent link = "gripper"/>
+            <child link = "finger_1"/>
+            <axis xyz = "1.000000 0.000000 0.000000"/>
+            <limit lower = "0.000000" upper = "0.000000"/>
+        </joint>
+        
+        <joint name = "Slider 17" type = "prismatic">
+            <origin xyz = "0.000000 0.000000 0.000000" rpy = "0 0 0"/>
+            <parent link = "gripper"/>
+            <child link = "finger_2"/>
+            <axis xyz = "1.000000 0.000000 0.000000"/>
+            <limit lower = "0.000000" upper = "0.000000"/>
+        </joint>
+        
+</robot>
