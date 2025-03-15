@@ -1,4 +1,5 @@
 # Simulation Files
-This folder contains a URDF file as well as the associated STL files.
+This content is currently untested and was generated using [fusion2urdf-ros2 ](https://github.com/dheena2k2/fusion2urdf-ros2) from Fusion 360.
+[!NOTE] The repo isn't compatible with newer versin of python, check out this [PR](https://github.com/dheena2k2/fusion2urdf-ros2/pull/7) instead.
 
-This content is currently untested and was generated using [ExportURDF](https://github.com/david-dorf/ExportURDF/tree/main) from Fusion 360.
+Contains URDF files, STL files, and scripts needed to work with ROS2 including gazebo and rviz.
