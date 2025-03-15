@@ -22,6 +22,16 @@ As I've itterated through various designs, modularity and maintenance became top
         - [Gripper](#gripper)
 3. [Assembly](#assembly)
 
+## Versioning
+Version numbers are determined purley by emotion. Don't ask what SDE stands for.
+
+| Version   | Date          | Notes                             |
+|---        | ---           | ---                               |
+| 0.35 SDE  | 12/28/2024    | 6 axis, 7 motor design            |
+| 0.45 SDE  | 1/17/2025     | Gripper v2 added                  |
+| 0.55 SDE  | 1/28/2025     | Power Box added                   |
+| 0.56 SDE  | 3/15/2025     | New gripper motor magnet holder   | 
+
 ## Inspirations
 Without the below projects and youtube channels the dARM project wouldn't exist.  I can't thank them enough for the inspiration and advice they've provided.
 
