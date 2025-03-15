@@ -9,7 +9,7 @@ As I've itterated through various designs, modularity and maintenance became top
 
 ## Table of Contents
 1. [Versions](#versions)
-2. [Inspirationa](#inspirations)
+2. [Inspirations](#inspirations)
     - [James Burton](#james-burton)
     - [Skyentific](#Skyentific)
     - [OpenQDD](#openqdd)
