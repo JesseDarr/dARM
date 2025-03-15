@@ -8,19 +8,30 @@ So the dARM journey began. The goal was to design a cheap, powerful, robust, mod
 As I've itterated through various designs, modularity and maintenance became top priorities.  If any individual component fails, its modular section can be removed from the larger arm for easy replacement.
 
 ## Table of Contents
-1. [Inspiration](#inspiration)
+1. [Versions](#versions)
+2. [Inspirations](#inspirations)
     - [James Burton](#james-burton)
     - [Skyentific](#Skyentific)
     - [OpenQDD](#openqdd)
     - [SSG48 Gripper](#ssg48-gripper)
-2. [Design](#design)
+3. [Design](#design)
     - [Control](#control)
     - [Power](#power)
     - [Mechanical](#mechanical)
         - [Primary Actuators](#primary-actuators)
         - [Forearm and Differential](#forearm-and-differential)
         - [Gripper](#gripper)
-3. [Assembly](#assembly)
+4. [Assembly](#assembly)
+
+## Versions
+Version numbers are determined purley by emotion. Don't ask what SDE stands for.
+
+| Version   | Date          | Notes                             |
+|---        | ---           | ---                               |
+| 0.35 SDE  | 12/28/2024    | 6 axis, 7 motor design            |
+| 0.45 SDE  | 1/17/2025     | Gripper v2 added                  |
+| 0.55 SDE  | 1/28/2025     | Power Box added                   |
+| 0.56 SDE  | 3/15/2025     | New gripper motor magnet holder   | 
 
 ## Inspirations
 Without the below projects and youtube channels the dARM project wouldn't exist.  I can't thank them enough for the inspiration and advice they've provided.
@@ -29,7 +40,7 @@ Without the below projects and youtube channels the dARM project wouldn't exist.
 What can I say about James.  I've been watching his channel for years.  Initially because he did interesting things with 3d printed parts, but shortly after that because the things he did were so consistently intersting.  James introduced me to ODrives as a control mechansim for BLDC motors.
 
 #### [Skyentific](https://www.youtube.com/@Skyentific)
-Another great youtuber.  He focuses on robotic arms, and mostly 3d printed robotic arms. He covers specifics of design, assembly, and controll for several different robot arms.  He also covers ODrives in great detail, including a video that uses a custom modified firmware to increase communication speed for specific queries over CAN.
+Another great youtuber.  He focuses on robotic arms, mostly 3d printed robotic arms. He covers specifics of design, assembly, and controll for several different robot arms.  He also covers ODrives in great detail, including a video that uses a custom modified firmware to increase communication speed for specific queries over CAN.
 
 #### [OpenQDD](https://www.aaedmusa.com/projects/openqdd)
 The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has an excellent [youtube channel](https://www.youtube.com/@aaedmusa). We use the same basic layout of an `8308 motor`, an `ODrive S1`, and a `planetary gearbox`. Our actuators have been redesigned from scatch to increased strength and rigidity, tigheten tolerances, print easier, and to have more robust mounting capabilities.
