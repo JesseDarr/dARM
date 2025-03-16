@@ -57,9 +57,9 @@ The basis for the gripper is the SSG48 project.  We use a different motor, contr
 ### Mechanical
 
 #### Primary Actuators
-These are the modular building block of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
+These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
 
-Double bearing actuators handle load perpindicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
+Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
 Single bearing actuators are used in joints that rotate on the horizontal axis. **Note:** Joint 1 uses 2 single bearing actuators for increased power. This also eliminates the need for a doubl bearing actuator.
 
