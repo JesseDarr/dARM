@@ -61,7 +61,7 @@ These are the modular building blocks of joints 0-3. Each actuator use an `Eagle
 
 Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
-Single bearing actuators are used in joints that rotate on the horizontal axis. **Note:** Joint 1 uses 2 single bearing actuators for increased power. This also eliminates the need for a doubl bearing actuator.
+Single bearing actuators are used in joints that rotate on the horizontal axis. **Note:** Joint 1 uses 2 single bearing actuators for increased power. This also eliminates the need for a double bearing actuator.
 
 Below is an explode animation of each flavor.  They should give you a good idea of the sub components involved and are also a good assembly reference.
 
