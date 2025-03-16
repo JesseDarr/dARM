@@ -40,7 +40,7 @@ Without the below projects and youtube channels the dARM project wouldn't exist.
 What can I say about James.  I've been watching his channel for years.  Initially because he did interesting things with 3d printed parts, but shortly after that because the things he did were so consistently interesting.  James introduced me to ODrives as a control mechansim for BLDC motors.
 
 #### [Skyentific](https://www.youtube.com/@Skyentific)
-Another great youtuber.  He focuses on robotic arms, mostly 3d printed robotic arms. He covers specifics of design, assembly, and controll for several different robot arms.  He also covers ODrives in great detail, including a video that uses a custom modified firmware to increase communication speed for specific queries over CAN.
+Another great youtuber.  He focuses on robotic arms, mostly 3d printed robotic arms. He covers specifics of design, assembly, and control for several different robot arms.  He also covers ODrives in great detail, including a video that uses a custom modified firmware to increase communication speed for specific queries over CAN.
 
 #### [OpenQDD](https://www.aaedmusa.com/projects/openqdd)
 The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has an excellent [youtube channel](https://www.youtube.com/@aaedmusa). We use the same basic layout of an `8308 motor`, an `ODrive S1`, and a `planetary gearbox`. Our actuators have been redesigned from scatch to increased strength and rigidity, tigheten tolerances, print easier, and to have more robust mounting capabilities.
