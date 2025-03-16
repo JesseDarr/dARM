@@ -20,7 +20,7 @@ Contains:
 + All subcomponents
 
 ## powerBox.3mf
-Housing for switching power supply, power monitor, dispaly, and on/off switch.
+Housing for switching power supply, power monitor, display, and on/off switch.
 + Early version
     - lid just seats on box
-    - relies on it's own weight
+    - relies on its own weight
