@@ -1,8 +1,8 @@
 # Step Files
-These files allow anyone to easily modify and imporove the dARM physical design in almost any CAD software.
+These files allow anyone to easily modify and improve the dARM physical design in almost any CAD software.
 
 ## dARM.zip
-This is the entire robot arm.  It is zipped because the .step files was larger than the 100 MB github limit.
+This is the entire robot arm.  It is zipped because the .step file was larger than the 100 MB github limit.
 
 Contains:
 + Legs
@@ -12,7 +12,7 @@ Contains:
 + All subcomponents
 
 ## powerBox.step
-Housing for switching power supply, power monitor, dispaly, and on/off switch.
+Housing for switching power supply, power monitor, display, and on/off switch.
 + Early version
     - lid just seats on box
-    - relies on it's own weight
+    - relies on its own weight
