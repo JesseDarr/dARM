@@ -24,7 +24,7 @@ As I've iterated through various designs, modularity and maintenance became top 
 4. [Assembly](#assembly)
 
 ## Versions
-Version numbers are determined purley by emotion. Don't ask what SDE stands for.
+Version numbers are determined purely by emotion. Don't ask what SDE stands for.
 
 | Version   | Date          | Notes                             |
 |---        | ---           | ---                               |
