@@ -37,7 +37,7 @@ Version numbers are determined purley by emotion. Don't ask what SDE stands for.
 Without the below projects and youtube channels the dARM project wouldn't exist.  I can't thank them enough for the inspiration and advice they've provided.
 
 #### [James Burton](https://www.youtube.com/@jamesbruton)
-What can I say about James.  I've been watching his channel for years.  Initially because he did interesting things with 3d printed parts, but shortly after that because the things he did were so consistently intersting.  James introduced me to ODrives as a control mechansim for BLDC motors.
+What can I say about James.  I've been watching his channel for years.  Initially because he did interesting things with 3d printed parts, but shortly after that because the things he did were so consistently interesting.  James introduced me to ODrives as a control mechansim for BLDC motors.
 
 #### [Skyentific](https://www.youtube.com/@Skyentific)
 Another great youtuber.  He focuses on robotic arms, mostly 3d printed robotic arms. He covers specifics of design, assembly, and controll for several different robot arms.  He also covers ODrives in great detail, including a video that uses a custom modified firmware to increase communication speed for specific queries over CAN.
