@@ -79,7 +79,7 @@ The BOM lists sacrifical 4pin JST-GH wires.  You will need to cut them in half a
 
 The cable that connects the PI to ODrive 0 is a special case, it must also include a `PIN 4` for ground.  It should be wired into the `CAN Hat` like this:
 
-<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="500">
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
 Here is the [ODrive S1 pin out](https://docs.odriverobotics.com/v/latest/hardware/s1-datasheet.html#pinout) for reference.
 
