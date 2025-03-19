@@ -72,6 +72,7 @@ It's not well documented, but the ODrive S1 includes `4-pin JST-GH` ports.  Each
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_jst_gh.png" width="500">
 
 Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch` to `120R`.  All other ODrives should have this DIP Switch set to `No R`. 
+
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.png" width="500">
 
 4 pin sacrifical wires
