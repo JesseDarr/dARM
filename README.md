@@ -60,13 +60,13 @@ The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s
 
 #### Wiring
 CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last. 
-
+```
          ┌─────────┐        ┌──────────┐     ┌──────────┐     ┌────────────┐
          │ CAN Hat ├───────►│ ODrive 0 ├────►│ ODrive 1 ├────►│ ODrive 2-7 │
 ┌────────└─────────┘┐       └──────────┘     └──────────┘     └────────────┘                        
 │  Raspberry Pi 4b  │                                                                                        
 └───────────────────┘                                                        
-
+```
 
 
 
