@@ -48,18 +48,17 @@ The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has
 #### [SSG48 Gripper](https://source-robotics.github.io/SSG48-gripper-docs/page1_about_the_gripper)
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
 
-## Design
 
-### Control
+## Control
 The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
 
-#### Pi
+### Pi
 
 
 
 
-#### Wiring
-CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last. 
+### Wiring
+CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last like this:
 ```
          ┌─────────┐        ┌──────────┐     ┌──────────┐     ┌────────────┐
          │ CAN Hat ├───────►│ ODrive 0 ├────►│ ODrive 1 ├────►│ ODrive 2-7 │
@@ -67,6 +66,8 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 │  Raspberry Pi 4b  │                                                                                        
 └───────────────────┘                                                        
 ```
+
+Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch` to `120R`.  All other ODrives should have this DIP Switch set to `No R`. 
 
 
 
@@ -77,14 +78,11 @@ Twisted Pair
 Custom made wire lengths
 Resistor switch on last ODrive - add pic
 
-#### Notes
-Be
+## Power
 
-### Power
+## Mechanical
 
-### Mechanical
-
-#### Primary Actuators
+### Primary Actuators
 These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
 
 Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
@@ -97,11 +95,11 @@ https://github.com/user-attachments/assets/06c78a0a-1a54-4e00-952e-c247763e0280
 
 https://github.com/user-attachments/assets/b43786ba-b51d-407c-8697-83d8e092f9be
 
-#### Forearm and Differential
+### Forearm and Differential
 
 https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 
-#### Gripper
+### Gripper
 
 https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
