@@ -69,7 +69,7 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 
 Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch` to `120R`.  All other ODrives should have this DIP Switch set to `No R`. 
 
-
+![120ohm Resistor DIP Switch](https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.png)
 
 PIC of side connectors
 Daisy chained - little text diagram
