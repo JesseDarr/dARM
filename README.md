@@ -52,12 +52,14 @@ The basis for the gripper is the SSG48 project.  We use a different motor, contr
 ## Control
 The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
 
+In a CAN network, the controller does not require a node ID, but each device on the network must have one. From this point forward, assume that the term "node" refers specifically to an ODrive and that node IDs are zero-indexed.
+
 ### Pi
 
 
 
 
-### Wiring
+### CAN Wiring
 CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last like this:
 ```
          ┌─────────┐        ┌──────────┐     ┌──────────┐     ┌────────────┐
@@ -67,7 +69,7 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 └───────────────────┘                                                        
 ```
 
-It's not well documented, but the ODrive S1 includes `4-pin JST-GH` ports.  Each odrive will have 1 cable "comming into it" and 1 cable "leaving it" - except the last which will only have 1 cable.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
+It's not well documented, but the ODrive S1 includes two `4-pin JST-GH` ports.  Each ODrive has 1 cable connected to the previous node and 1 cable connected to the next node.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.jpg" width="500">
 
@@ -81,7 +83,7 @@ The cable that connects the PI to ODrive 0 is a special case, it must also inclu
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
-## Power
+## Power Wiring
 
 ## Mechanical
 
