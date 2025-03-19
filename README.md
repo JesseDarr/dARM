@@ -67,16 +67,16 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 └───────────────────┘                                                        
 ```
 
-Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch` to `120R`.  All other ODrives should have this DIP Switch set to `No R`. 
+It's not well documented, but the ODrive S1 includes `4-pin JST-GH` ports.  Each odrive will have 1 cable "comming into it" and 1 cable "leaving it" - except the last which will only have 1 cable.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
 
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_jst_gh.png" width="500">
+
+Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch` to `120R`.  All other ODrives should have this DIP Switch set to `No R`. 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.png" width="500">
 
-PIC of side connectors
-Daisy chained - little text diagram
-Twisted Pair 
 4 pin sacrifical wires
 Custom made wire lengths
-Resistor switch on last ODrive - add pic
+
 
 ## Power
 
