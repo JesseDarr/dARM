@@ -75,8 +75,11 @@ Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.png" width="500">
 
-4 pin sacrifical wires
-Custom made wire lengths
+The BOM lists sacrifical 4pin JST-GH wires.  You will need to cut them in half and solder them into twisted pair.  You need to wire the twisted pair in a `roll over` fashion such that `PIN 2 is wired to PIN 2`, and `PIN 3 is wired to PIN 3`.  It is recommend to  solder 1 end connector onto the `tiwsted pair`, attach it to an ODrive, and then measure the required length of that cable.
+
+The cable that connects the PI to ODrive 0 is a special case, it must also include a `PIN 4` for ground.  It should be wired into the `CAN Hat` like this:
+
+### PIC GOES HERE ###
 
 
 ## Power
