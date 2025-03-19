@@ -69,19 +69,17 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 
 It's not well documented, but the ODrive S1 includes `4-pin JST-GH` ports.  Each odrive will have 1 cable "comming into it" and 1 cable "leaving it" - except the last which will only have 1 cable.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
 
-<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_jst_gh.jpg" width="500">
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.jpg" width="500">
 
 Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch` to `120R`.  All other ODrives should have this DIP Switch set to `No R`. 
 
-<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.jpg" width="500">
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_jst_gh.jpg" width="500">
 
 The BOM lists sacrifical 4pin JST-GH wires.  You will need to cut them in half and solder them into twisted pair.  You need to wire the twisted pair in a `roll over` fashion such that `PIN 2 is wired to PIN 2`, and `PIN 3 is wired to PIN 3`.  It is recommend to  solder 1 end connector onto the `tiwsted pair`, attach it to an ODrive, and then measure the required length of that cable.
 
 The cable that connects the PI to ODrive 0 is a special case, it must also include a `PIN 4` for ground.  It should be wired into the `CAN Hat` like this:
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
-
-Here is the [ODrive S1 pin out](https://docs.odriverobotics.com/v/latest/hardware/s1-datasheet.html#pinout) for reference.
 
 ## Power
 
