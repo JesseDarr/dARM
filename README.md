@@ -51,6 +51,34 @@ The basis for the gripper is the SSG48 project.  We use a different motor, contr
 ## Design
 
 ### Control
+The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
+
+#### Pi
+
+
+
+
+#### Wiring
+CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last. 
+
+         ┌─────────┐        ┌──────────┐     ┌──────────┐     ┌────────────┐
+         │ CAN Hat ├───────►│ ODrive 0 ├────►│ ODrive 1 ├────►│ ODrive 2-7 │
+┌────────└─────────┘┐       └──────────┘     └──────────┘     └────────────┘                        
+│  Raspberry Pi 4b  │                                                                                        
+└───────────────────┘                                                        
+
+
+
+
+PIC of side connectors
+Daisy chained - little text diagram
+Twisted Pair 
+4 pin sacrifical wires
+Custom made wire lengths
+Resistor switch on last ODrive - add pic
+
+#### Notes
+Be
 
 ### Power
 
