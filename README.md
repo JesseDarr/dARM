@@ -16,6 +16,8 @@ After iterating through various designs, modularity and maintenence became top p
     - [SSG48 Gripper](#ssg48-gripper)
 3. [Design](#design)
     - [Control](#control)
+        - [Pi](#pi)
+        - [CAN Wiring](#can-wiring)
     - [Power](#power)
     - [Mechanical](#mechanical)
         - [Primary Actuators](#primary-actuators)
@@ -48,15 +50,12 @@ The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has
 #### [SSG48 Gripper](https://source-robotics.github.io/SSG48-gripper-docs/page1_about_the_gripper)
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
 
-
 ## Control
 The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
 
 In a CAN network, the controller does not require a node ID, but each device on the network must have one. From this point forward, assume that the term "node" refers specifically to an ODrive and that node IDs are zero-indexed.
 
 ### Pi
-
-
 
 
 ### CAN Wiring
