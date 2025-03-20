@@ -79,6 +79,41 @@ sudo apt-get install can-utils  <---- includes candump which can be used to see 
 sudo apt install python3-can    <---- includes CAN viewer script which can view all CAN traffic
 ```
 
+#### CAN Service
+A can `systemd` service can be used to bring up the CAN interface on boot.  Create file `/etc/systemd/system/can0-setup.service` with the following contents:
+```
+[Unit]
+Description=Set up CAN0 interface
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip link set can0 up type can bitrate 1000000
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Then run the following commands:
+```
+sudo systemctl enable can0-setup.service
+sudo systemctl start can0-setup.service
+sudo systemctl status can0-setup.service
+sudo reboot
+```
+
+Finally, run `ip a` to verify the CAN interface started on boot.
+
+#### Clone git repo
+`cd` to an appropriate directory and run `git clone https://github.com/JesseDarr/dARM.git` to clone the repo.  You will find the test scripts in the `odrive_tools` folder.  Note: this folder is actually a git sub module that links to this repo: `https://github.com/JesseDarr/dARM_odrive_tools.git` 
+
+#### Game Controllers
+If you want to buy a cheap bluetooth dongle you can use an XBox One, XBox Series X, PS4 or PS5 controller with the `gamecontroller.py` script to control the dARM.  You will need to install the appropriate drives and use the `bluetoothctl` command to pair/connect the controller.  Run `ls /dev/input` and check for `js0` to ensure the controller is ready to work with the script.
+
+Bluetooth on Linux is sketchy...bluetooth is sketchy...to combat this `reset_interfaces.sh` will reset the CAN and Bluetooth interfaces.  It can save a few reboots from time to time.
+
+If using a Playstation Controller you also want to ensure the Sony module loads on boot.  Edit `/etc/modules` and add `hid-sony` to the bottom line.
+
 ### CAN Wiring
 CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last like this:
 ```
