@@ -66,7 +66,7 @@ dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25
 dtoverlay=spi0-hw-cs
 ```
 Reboot and run `dmesg | grep MCP2515` to verify the CAN Hat is now recognized.
-<br>
+<br/>
 
 Next we need to bring up the CAN interface with the following:
 ```
