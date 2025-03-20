@@ -58,13 +58,29 @@ In a CAN network, the controller does not require a node ID, but each device on 
 ### Pi
 The Pi is currently running Ubuntu 22.04 Server, but everything should still work with newer versions.  Instructions for install Ubuntu on a Pi can be found [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview).  Set the hostname to `pidarm` and the username to `darm`.  Configure DHCP to connect to your wifi network.
 
-#### Setup Commands
-We need a static IP address so we can easily SSH into our PI.  This can be done in several ways, including this:
+#### Enable CAN Communication
+The CAN Hat communicates to our ODrives, but it must also communicate to the Pi.  This is done through a `Serial Peripheral Interface (SPI)`. To enable the interface edit `/boot/firmware/config.txt` and add teh following at the bottom of the file:
+```
+dtparam=spi=on 
+dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25 
+dtoverlay=spi0-hw-cs
+```
+Reboot and run `dmesg | grep MCP2515` to verify the CAN Hat is now recognized.
 
-1. disable cloud-init networking
-    - ```
-     sudo echo "network: {config: disabled}" | sudo tee /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
-     ```
+Next we need to bring up the CAN interface with the following:
+```
+sudo ip link set can0 up type can bitrate 1000000
+```
+Then run `ip a` to veryify the interface is up.
+
+Finally, install some handy CAN troubleshooting tools:
+```
+sudo apt-get install can-utils          <---- includes candump which can be used to see heartbeats from ODrives
+sudo apt install python3-can            <---- includes CAN viewer script which can view all CAN traffic
+```
+
+
+
 
 
 
