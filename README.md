@@ -51,11 +51,21 @@ The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
 
 ## Control
-The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
+The dARM is controlled with a `Raspberry Pi 4b` communicating to eight `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
 
 In a CAN network, the controller does not require a node ID, but each device on the network must have one. From this point forward, assume that the term "node" refers specifically to an ODrive and that node IDs are zero-indexed.
 
 ### Pi
+The Pi is currently running Ubuntu 22.04 Server, but everything should still work with newer versions.  Instructions for install Ubuntu on a Pi can be found [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview).  Set the hostname to `pidarm` and the username to `darm`.  Configure DHCP to connect to your wifi network.
+
+#### Setup Commands
+We need a static IP address so we can easily SSH into our PI.  This can be done in several ways, including this:
+
+1. disable cloud-init networking
+     - ```
+     sudo echo "network: {config: disabled}" | sudo tee /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+     ```
+
 
 
 ### CAN Wiring
@@ -83,6 +93,9 @@ The cable that connects the PI to ODrive 0 is a special case, it must also inclu
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
 ## Power
+
+- small    = 18 
+- standard = 14
 
 ## Mechanical
 
