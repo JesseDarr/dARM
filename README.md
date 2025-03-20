@@ -62,7 +62,7 @@ The Pi is currently running Ubuntu 22.04 Server, but everything should still wor
 We need a static IP address so we can easily SSH into our PI.  This can be done in several ways, including this:
 
 1. disable cloud-init networking
-     - ```
+    - ```
      sudo echo "network: {config: disabled}" | sudo tee /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
      ```
 
