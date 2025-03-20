@@ -56,7 +56,7 @@ The dARM is controlled with a `Raspberry Pi 4b` communicating to eight `ODrive S
 In a CAN network, the controller does not require a node ID, but each device on the network must have one. From this point forward, assume that the term "node" refers specifically to an ODrive and that node IDs are zero-indexed.
 
 ### Pi
-The Pi is currently running Ubuntu 22.04 Server, but everything should still work with newer versions.  Instructions for install Ubuntu on a Pi can be found [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview).  Set the hostname to `pidarm` and the username to `darm`.  Configure DHCP to connect to your wifi network.
+The Pi is currently running `Ubuntu 22.04 Server`, but everything should still work with newer versions.  Instructions for installing Ubuntu on a Pi can be found [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview).  Set the hostname to `pidarm` and the username to `darm`.  It is also recommened to set a static IP on the Pi so it can be accessed via SSH.
 
 #### Enable CAN Communication
 The CAN Hat communicates to our ODrives, but it must also communicate to the Pi.  This is done through a `Serial Peripheral Interface (SPI)`. To enable the interface edit `/boot/firmware/config.txt` and add teh following at the bottom of the file:
@@ -67,17 +67,19 @@ dtoverlay=spi0-hw-cs
 ```
 Reboot and run `dmesg | grep MCP2515` to verify the CAN Hat is now recognized.
 
+
 Next we need to bring up the CAN interface with the following:
 ```
 sudo ip link set can0 up type can bitrate 1000000
 ```
 Then run `ip a` to veryify the interface is up.
 
+
 Finally, install some handy CAN troubleshooting tools:
 ```
 sudo apt-get install can-utils          <---- includes candump which can be used to see heartbeats from ODrives
 sudo apt install python3-can            <---- includes CAN viewer script which can view all CAN traffic
-```
+````
 
 
 
