@@ -16,6 +16,8 @@ After iterating through various designs, modularity and maintenence became top p
     - [SSG48 Gripper](#ssg48-gripper)
 3. [Design](#design)
     - [Control](#control)
+        - [Pi](#pi)
+        - [CAN Wiring](#can-wiring)
     - [Power](#power)
     - [Mechanical](#mechanical)
         - [Primary Actuators](#primary-actuators)
@@ -48,16 +50,36 @@ The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has
 #### [SSG48 Gripper](https://source-robotics.github.io/SSG48-gripper-docs/page1_about_the_gripper)
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
 
-
 ## Control
-The dARM is controlled with a `Raspberry Pi 4b` communicating to the `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
+The dARM is controlled with a `Raspberry Pi 4b` communicating to eight `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
+
+In a CAN network, the controller does not require a node ID, but each device on the network must have one. From this point forward, assume that the term "node" refers specifically to an ODrive and that node IDs are zero-indexed.
 
 ### Pi
+The Pi is currently running `Ubuntu 22.04 Server`, but everything should still work with newer versions.  Instructions for installing Ubuntu on a Pi can be found [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview).  Set the hostname to `pidarm` and the username to `darm`.  It is also recommened to set a static IP on the Pi so it can be accessed via SSH.
 
+#### Enable CAN Communication
+The CAN Hat communicates to our ODrives, but it must also communicate to the Pi.  This is done through a `Serial Peripheral Interface (SPI)`. To enable the interface edit `/boot/firmware/config.txt` and add teh following at the bottom of the file:
+```
+dtparam=spi=on 
+dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25 
+dtoverlay=spi0-hw-cs
+```
+Reboot and run `dmesg | grep MCP2515` to verify the CAN Hat is now recognized.
 
+Next we need to bring up the CAN interface with the following:
+```
+sudo ip link set can0 up type can bitrate 1000000
+```
+Then run `ip a` to veryify the interface is up.
 
+Finally, install some handy CAN troubleshooting tools:
+```
+sudo apt-get install can-utils          <---- includes candump which can be used to see heartbeats from ODrives
+sudo apt install python3-can            <---- includes CAN viewer script which can view all CAN traffic
+```
 
-### Wiring
+### CAN Wiring
 CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last like this:
 ```
          ┌─────────┐        ┌──────────┐     ┌──────────┐     ┌────────────┐
@@ -67,7 +89,7 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 └───────────────────┘                                                        
 ```
 
-It's not well documented, but the ODrive S1 includes `4-pin JST-GH` ports.  Each odrive will have 1 cable "comming into it" and 1 cable "leaving it" - except the last which will only have 1 cable.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
+It's not well documented, but the ODrive S1 includes two `4-pin JST-GH` ports.  Each ODrive has 1 cable connected to the previous node and 1 cable connected to the next node.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_jst_gh.jpg" width="500">
 
@@ -75,15 +97,16 @@ Be sure to enabled the `120ohm resistor on ODrive 7` by flipping the `DIP Switch
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_dip_switch.jpg" width="500">
 
-The BOM lists sacrifical 4pin JST-GH wires.  You will need to cut them in half and solder them into twisted pair.  You need to wire the twisted pair in a `roll over` fashion such that `PIN 2 is wired to PIN 2`, and `PIN 3 is wired to PIN 3`.  It is recommend to  solder 1 end connector onto the `tiwsted pair`, attach it to an ODrive, and then measure the required length of that cable.
+The BOM lists sacrifical 4pin JST-GH wires.  You will need to cut them in half and solder them into twisted pair.  You need to wire the twisted pair in a `roll over` fashion such that `PIN 2 is wired to PIN 2`, and `PIN 3 is wired to PIN 3`.  It is recommend to  solder 1 end connector onto the tiwsted pair, attach it to an ODrive, and then measure the required length of that cable.
 
-The cable that connects the PI to ODrive 0 is a special case, it must also include a `PIN 4` for ground.  It should be wired into the `CAN Hat` like this:
+The cable that connects the PI to ODrive 0 is a special case: it must also include `PIN 4` for ground.  It should be wired into the `CAN Hat` like this:
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
-Here is the [ODrive S1 pin out](https://docs.odriverobotics.com/v/latest/hardware/s1-datasheet.html#pinout) for reference.
-
 ## Power
+
+- small    = 18 
+- standard = 14
 
 ## Mechanical
 
