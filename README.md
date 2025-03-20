@@ -80,7 +80,7 @@ sudo apt install python3-can    <---- includes CAN viewer script which can view 
 ```
 
 #### CAN Service
-A can `systemd` service can be used to bring up the CAN interface on boot.  Create file `/etc/systemd/system/can0-setup.service` with the following contents:
+A `systemd` service can be used to bring up the CAN interface on boot.  Create file `/etc/systemd/system/can0-setup.service` with the following contents:
 ```
 [Unit]
 Description=Set up CAN0 interface
