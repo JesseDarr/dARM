@@ -75,8 +75,8 @@ Then run `ip a` to veryify the interface is up.
 
 Finally, install some handy CAN troubleshooting tools:
 ```
-sudo apt-get install can-utils   <---- includes candump which can be used to see heartbeats from ODrives
-sudo apt install python3-can     <---- includes CAN viewer script which can view all CAN traffic
+sudo apt-get install can-utils  <---- includes candump which can be used to see heartbeats from ODrives
+sudo apt install python3-can    <---- includes CAN viewer script which can view all CAN traffic
 ```
 
 ### CAN Wiring
