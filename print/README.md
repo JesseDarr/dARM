@@ -24,3 +24,6 @@ Housing for switching power supply, power monitor, display, and on/off switch.
 + Early version
     - lid just seats on box
     - relies on its own weight
+
+## fingers.3mf
+Additional compliant finger designs. Each plate is labeled by version starting with v4.  v3 is included in dARM.3mf.
