@@ -19,7 +19,7 @@ Contains:
 + Gripper
 + All subcomponents
 
-## dock
+## dock.3mf
 TPU dock that tightly fits the base and 3rd joint in the resting position.
 + Acts as zero position
 + Make `endstop switches` unnecessary
