@@ -145,6 +145,7 @@ Power is provided by a `1200W 48V switching power supply`.  This along with a `p
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box.jpg" width="500">
 
 The inside looks like this:
+
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box_open.jpg" width="500">
 
 
