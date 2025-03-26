@@ -140,9 +140,19 @@ The cable that connects the PI to ODrive 0 is a special case: it must also inclu
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
 ## Power
+Power is provided by a `1200W 48V switching power supply`.  This along with a `power monitor` and `power switch` are packaged up inside our `power box`.  AC power goes in one side and DC power comes out the other.
 
-- small    = 18 
-- standard = 14
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box.jpg" width="500">
+
+The inside looks like this:
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box_open.jpg" width="500">
+
+
+
+Power wiring is all handled with 14 AWG except for the gripper motor which is powerd with 18 AWG.  It is likely that the forearm motors could also be powered with 18 AWG.
+
+
+
 
 ## Mechanical
 
