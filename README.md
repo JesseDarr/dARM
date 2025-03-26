@@ -140,6 +140,7 @@ The cable that connects the PI to ODrive 0 is a special case: it must also inclu
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
 ## Power
+### Power Box
 Power is provided by a `1200W 48V switching power supply`.  This along with a `power monitor` and `power switch` are packaged up inside our `power box`.  AC power goes in one side and DC power comes out the other.
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box.jpg" width="500">
