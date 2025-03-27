@@ -156,7 +156,7 @@ Wiring diagram:
 ### Power Wiring
 Power wiring is all 14 AWG except for the gripper motor which is powerd with 18 AWG.  It is likely that the forearm motors could also be powered with 18 AWG.
 
-Wiring a robot arm is difficult.  Wiring is all custom length, and measured after the robot has been assembled.  This allows a wire to be screwed into an ODrive, the respective joint moved to its most distant position, and an appropriate length can be cut.
+Wiring a robot arm is difficult.  Wiring is all custom length and is measured after the robot has been assembled.  This allows a wire to be screwed into an ODrive, the respective joint moved to its most distant position, and an appropriate length of cable cut.
 
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
