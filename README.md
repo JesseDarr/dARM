@@ -149,8 +149,11 @@ The inside looks like this:
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box_open.jpg" width="500">
 
+Wiring diagram:
 
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box_wiring.jpg" width="800">
 
+### Power Wiring
 Power wiring is all handled with 14 AWG except for the gripper motor which is powerd with 18 AWG.  It is likely that the forearm motors could also be powered with 18 AWG.
 
 
