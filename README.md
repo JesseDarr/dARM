@@ -126,9 +126,11 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 ```
 
 ```mermaid
-    graph TD;
-        CAN Hat --> ODrive 0;
-        ODrive 0 --> ODrive 1;
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
 
 It's not well documented, but the ODrive S1 includes two `4-pin JST-GH` ports.  Each ODrive has 1 cable connected to the previous node and 1 cable connected to the next node.  It does not matter which port is used for which cable.  This allows some freedom when building custom length CAN cables.
