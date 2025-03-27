@@ -161,9 +161,6 @@ Wiring a robot arm is difficult.  Wiring is all custom length, and measured afte
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
 Here is an overall power wiring diagram. 
-> :bulb: **Note:**
-> Each line in the diagram represents both postive and negative wires, and each T represents a pair of `T Tap Connectors'.
-
 ```                                                                                                    
          ┌──────────┐     ┌──────────┐   ┌──────────┐                                                        
          │ ODrive 1 ├──┬──┤ ODrive 2 │   │ ODrive 4 │                                                        
@@ -177,8 +174,13 @@ Here is an overall power wiring diagram.
         │ ODrive 0 │          │ ODrive 3 │                                                                  
         └──────────┘          └──────────┘                                                                                              
 ```
+> :bulb: **Note:**
+> Each line in the diagram represents both postive and negative wires, and each T represents a pair of `T Tap Connectors'.
 
 ## Mechanical
+Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
+Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
+Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
 
 ### Primary Actuators
 These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
