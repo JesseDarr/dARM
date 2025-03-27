@@ -126,7 +126,7 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 ```
 
 ```mermaid
-graph TD;
+flowchart LR;
     A-->B;
     A-->C;
     B-->D;
