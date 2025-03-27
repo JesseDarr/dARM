@@ -125,7 +125,7 @@ CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable con
 └───────────────────┘                                                        
 ```
 
-It's not well documented, but the ODrive S1 includes two `4-pin JST-GH` ports.  Each ODrive has 1 cable connected to the previous node and 1 cable connected to the next node.  It does not matter which port is used for which cable.  This allows us some freedom when we are building out our custom length cables.
+It's not well documented, but the ODrive S1 includes two `4-pin JST-GH` ports.  Each ODrive has 1 cable connected to the previous node and 1 cable connected to the next node.  It does not matter which port is used for which cable.  This allows some freedom when building custom length CAN cables.
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/odrive_s1_jst_gh.jpg" width="500">
 
@@ -149,12 +149,34 @@ The inside looks like this:
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box_open.jpg" width="500">
 
+Wiring diagram:
 
+<img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box_wiring.jpg" width="800">
 
-Power wiring is all handled with 14 AWG except for the gripper motor which is powerd with 18 AWG.  It is likely that the forearm motors could also be powered with 18 AWG.
+### Power Wiring
+Power wiring is all 14 AWG except for the gripper motor which is powerd with 18 AWG.  It is likely that the forearm motors could also be powered with 18 AWG.
 
+Wiring a robot arm is difficult.  Wiring is all custom length, and measured after the robot has been assembled.  This allows a wire to be screwed into an ODrive, the respective joint moved to its most distant position, and an appropriate length can be cut.
 
+Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
+Here is an overall power wiring diagram. 
+> :bulb: **Note:**
+> Each line in the diagram represents both postive and negative wires, and each T represents a pair of `T Tap Connectors'.
+
+```                                                                                                    
+                 ┌──────────┐     ┌──────────┐     ┌──────────┐                                                        
+                 │ ODrive 1 ├──┬──┤ ODrive 2 │     │ ODrive 4 │                                                        
+                 └──────────┘  │  └──────────┘     └─────┬────┘                                                        
+                               │                         │                                                             
+┌──────┐                       │                         │        ┌──────────┐     ┌──────────┐     ┌──────────┐       
+│ XT90 ├───────┬───────────────┴───────────────┬─────────┴────────┤ ODrive 5 ├─────┤ ODrive 6 ├─────┤ ODrive 7 │       
+└──────┘       │                               │                  └──────────┘     └──────────┘     └──────────┘       
+               │                               │                                                                       
+         ┌─────┴────┐                    ┌─────┴────┐                                                                  
+         │ ODrive 0 │                    │ ODrive 3 │                                                                  
+         └──────────┘                    └──────────┘                                                                                              
+```
 
 ## Mechanical
 
