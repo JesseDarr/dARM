@@ -118,7 +118,7 @@ If using a Playstation Controller you also want to ensure the Sony module loads 
 ### CAN Wiring
 CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last like this:
 ```mermaid
-graph LR
+flowchart LR
     subgraph "Raspberry Pi 4b"
         CAN_Hat[CAN Hat]
     end
@@ -164,20 +164,20 @@ Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90
 
 Here is an overall power wiring diagram. 
 ```mermaid                          
-graph LR
-    PowerBox[Power Box] --- XT90[XT90]
-    XT90 --- ODrive0[ODrive 0]
-    XT90 --- T0((T Tap))
-    T0 --- T1((T1 Tap))
-    T0 --- T2((T Tap))
-    T1 --- ODrive1[ODrive 1]
-    T1 --- ODrive2[ODrive 2]
-    T2 --- ODrive3[ODrive 3]
-    T2 --- T3((T Tap))
-    T3 --- ODrive4[ODrive 4]
-    T3 --- ODrive5[ODrive 5]
-    ODrive5 --- ODrive6[ODrive 6]
-    ODrive6 --- ODrive7[ODrive 7]
+flowchart LR
+    PowerBox[Power Box] --> XT90[XT90]
+    XT90 --> ODrive0[ODrive 0]
+    XT90 --> T0((T Tap))
+    T0 --> T1((T Tap))
+    T0 --> T2((T Tap))
+    T1 --> ODrive1[ODrive 1]
+    T1 --> ODrive2[ODrive 2]
+    T2 --> ODrive3[ODrive 3]
+    T2 --> T3((T Tap))
+    T3 --> ODrive4[ODrive 4]
+    T3 --> ODrive5[ODrive 5]
+    ODrive5 --> ODrive6[ODrive 6]
+    ODrive6 --> ODrive7[ODrive 7]
 ```
 > :bulb: **Note:**
 > each line in the diagram represents both postive and negative wires
