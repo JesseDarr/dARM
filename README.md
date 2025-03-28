@@ -163,7 +163,8 @@ Wiring a robot arm is difficult.  Wiring is all custom length, and measured afte
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
 Here is an overall power wiring diagram. 
-```mermaid                          
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'stepBefore' } } }%%
 flowchart LR
     PowerBox[Power Box] --> XT90[XT90]
     XT90 --> ODrive0[ODrive 0]
