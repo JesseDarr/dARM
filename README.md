@@ -75,7 +75,7 @@ sudo ip link set can0 up type can bitrate 1000000
 Then run `ip a` to veryify the interface is up.
 
 Finally, install some handy CAN troubleshooting tools:
-```zsh
+```
 sudo apt-get install can-utils  <---- includes candump which can be used to see heartbeats from ODrives
 sudo apt install python3-can    <---- includes CAN viewer script which can view all CAN traffic
 ```
@@ -163,21 +163,24 @@ Wiring a robot arm is difficult.  Wiring is all custom length, and measured afte
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
 Here is an overall power wiring diagram. 
-```                           
-         ┌──────────┐     ┌──────────┐   ┌──────────┐
-         │ ODrive 1 ├──┬──┤ ODrive 2 │   │ ODrive 4 │
-         └──────────┘  │  └──────────┘   └─────┬────┘
-                       │                       │     
-┌──────┐               │                       │   ┌──────────┐   ┌──────────┐   ┌──────────┐
-│ XT90 ├──────┬────────┴────────────┬──────────┴───┤ ODrive 5 ├───┤ ODrive 6 ├───┤ ODrive 7 │
-└──────┘      │                     │              └──────────┘   └──────────┘   └──────────┘
-              │                     │     
-        ┌─────┴────┐          ┌─────┴────┐
-        │ ODrive 0 │          │ ODrive 3 │
-        └──────────┘          └──────────┘
+```mermaid                          
+graph LR
+    PowerBox[Power Box] --- XT90[XT90]
+    XT90 --- ODrive0[ODrive 0]
+    XT90 --- T0((T Tap))
+    T0 --- T1((T1 Tap))
+    T0 --- T2((T Tap))
+    T1 --- ODrive1[ODrive 1]
+    T1 --- ODrive2[ODrive 2]
+    T2 --- ODrive3[ODrive 3]
+    T2 --- T3((T Tap))
+    T3 --- ODrive4[ODrive 4]
+    T3 --- ODrive5[ODrive 5]
+    ODrive5 --- ODrive6[ODrive 6]
+    ODrive6 --- ODrive7[ODrive 7]
 ```
 > :bulb: **Note:**
-> Each line in the diagram represents both postive and negative wires, and each T represents a pair of `T Tap Connectors'.
+> each line in the diagram represents both postive and negative wires
 
 ## Mechanical
 Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
