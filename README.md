@@ -75,7 +75,7 @@ sudo ip link set can0 up type can bitrate 1000000
 Then run `ip a` to veryify the interface is up.
 
 Finally, install some handy CAN troubleshooting tools:
-```
+```zsh
 sudo apt-get install can-utils  <---- includes candump which can be used to see heartbeats from ODrives
 sudo apt install python3-can    <---- includes CAN viewer script which can view all CAN traffic
 ```
@@ -117,20 +117,14 @@ If using a Playstation Controller you also want to ensure the Sony module loads 
 
 ### CAN Wiring
 CAN wiring starts from the CAN Hat on the Pi.  A single `twisted pair` cable connects it to ODrive 0, which is then connected to ODrive 1, and so on with each ODrive daisy chained from the last like this:
-```
-         ┌─────────┐        ┌──────────┐     ┌──────────┐     ┌────────────┐
-         │ CAN Hat ├───────►│ ODrive 0 ├────►│ ODrive 1 ├────►│ ODrive 2-7 │
-┌────────└─────────┘┐       └──────────┘     └──────────┘     └────────────┘                        
-│  Raspberry Pi 4b  │                                                                                        
-└───────────────────┘                                                        
-```
-
 ```mermaid
-flowchart LR;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph LR
+    subgraph "Raspberry Pi 4b"
+        CAN_Hat[CAN Hat]
+    end
+    CAN_Hat <--> ODrive0[ODrive 0]
+    ODrive0 <--> ODrive1[ODrive 1]
+    ODrive1 <--> ODrive27[ODrive 2-7]
 ```
 
 It's not well documented, but the ODrive S1 includes two `4-pin JST-GH` ports.  Each ODrive has 1 cable connected to the previous node and 1 cable connected to the next node.  It does not matter which port is used for which cable.  This allows some freedom when building custom length CAN cables.
@@ -169,18 +163,18 @@ Wiring a robot arm is difficult.  Wiring is all custom length, and measured afte
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
 Here is an overall power wiring diagram. 
-```                                                                                                    
-         ┌──────────┐     ┌──────────┐   ┌──────────┐                                                        
-         │ ODrive 1 ├──┬──┤ ODrive 2 │   │ ODrive 4 │                                                        
-         └──────────┘  │  └──────────┘   └─────┬────┘                                                        
-                       │                       │                                                             
-┌──────┐               │                       │   ┌──────────┐   ┌──────────┐   ┌──────────┐       
-│ XT90 ├──────┬────────┴────────────┬──────────┴───┤ ODrive 5 ├───┤ ODrive 6 ├───┤ ODrive 7 │       
-└──────┘      │                     │              └──────────┘   └──────────┘   └──────────┘       
-              │                     │                                                                      
-        ┌─────┴────┐          ┌─────┴────┐                                                                  
-        │ ODrive 0 │          │ ODrive 3 │                                                                  
-        └──────────┘          └──────────┘                                                                                              
+```                           
+         ┌──────────┐     ┌──────────┐   ┌──────────┐
+         │ ODrive 1 ├──┬──┤ ODrive 2 │   │ ODrive 4 │
+         └──────────┘  │  └──────────┘   └─────┬────┘
+                       │                       │     
+┌──────┐               │                       │   ┌──────────┐   ┌──────────┐   ┌──────────┐
+│ XT90 ├──────┬────────┴────────────┬──────────┴───┤ ODrive 5 ├───┤ ODrive 6 ├───┤ ODrive 7 │
+└──────┘      │                     │              └──────────┘   └──────────┘   └──────────┘
+              │                     │     
+        ┌─────┴────┐          ┌─────┴────┐
+        │ ODrive 0 │          │ ODrive 3 │
+        └──────────┘          └──────────┘
 ```
 > :bulb: **Note:**
 > Each line in the diagram represents both postive and negative wires, and each T represents a pair of `T Tap Connectors'.
