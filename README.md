@@ -180,7 +180,7 @@ graph LR
     ODrive6 --> ODrive7[ODrive 7]
 ```
 > :bulb: **Note:**
-> each line in the diagram represents both postive and negative wires
+> each line in the diagram represents both postive and negative wires, and each empty square represents a `T Tap Connector`
 
 ## Mechanical
 Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
