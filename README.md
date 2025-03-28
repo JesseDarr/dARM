@@ -106,7 +106,9 @@ sudo reboot
 Finally, run `ip a` to verify the CAN interface started on boot.
 
 #### Clone git repo
-`cd` to an appropriate directory and run `git clone https://github.com/JesseDarr/dARM.git` to clone the repo.  You will find the test scripts in the `odrive_tools` folder.  Note: this folder is actually a git sub module that links to this repo: `https://github.com/JesseDarr/dARM_odrive_tools.git` 
+`cd` to an appropriate directory and run `git clone https://github.com/JesseDarr/dARM.git` to clone the repo.  You will find the test scripts in the `odrive_tools` folder.  
+> :bulb: **Note:**
+> This folder is actually a git sub module that links to this repo: `https://github.com/JesseDarr/dARM_odrive_tools.git` 
 
 #### Game Controllers
 If you want to buy a cheap bluetooth dongle you can use an XBox One, XBox Series X, PS4 or PS5 controller with the `gamecontroller.py` script to control the dARM.  You will need to install the appropriate drives and use the `bluetoothctl` command to pair/connect the controller.  Run `ls /dev/input` and check for `js0` to ensure the controller is ready to work with the script.
@@ -180,7 +182,7 @@ graph LR
     ODrive6 --> ODrive7[ODrive 7]
 ```
 > :bulb: **Note:**
-> each line in the diagram represents both postive and negative wires, and each empty square represents a `T Tap Connector`
+> Each line in the diagram represents both postive and negative wires, and each empty square represents a `T Tap Connector`.
 
 ## Mechanical
 Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
@@ -192,7 +194,9 @@ These are the modular building blocks of joints 0-3. Each actuator use an `Eagle
 
 Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
-Single bearing actuators are used in joints that rotate on the horizontal axis. **Note:** Joint 1 uses 2 single bearing actuators for increased power. This also eliminates the need for a double bearing actuator.
+Single bearing actuators are used in joints that rotate on the horizontal axis. 
+> :bulb: **Note:**
+> Joint 1 uses 2 single bearing actuators for increased power. This also eliminates the need for a double bearing actuator.
 
 Below is an explode animation of each flavor.  They should give you a good idea of the sub components involved and are also a good assembly reference.
 
