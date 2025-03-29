@@ -150,8 +150,10 @@ The cable that connects the PI to ODrive 0 is a special case: it must also inclu
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/rs485_can_hat.jpg" width="800">
 
 ## Power
+Power is provided by a `1200W 48V switching power supply`.  While this voltage exceeds the motors’ nominal ratings, each motor typically draws only 2–3 amps and operates intermittently rather than under continuous load.
+
 ### Power Box
-Power is provided by a `1200W 48V switching power supply`.  This along with a `power monitor` and `power switch` are packaged up inside our `power box`.  AC power goes in one side and DC power comes out the other.
+The `switching power supply` along with a `power monitor` and `power switch` are packaged up inside our `power box`.  AC power goes in one side and DC power comes out the other.
 
 <img src="https://github.com/JesseDarr/dARM/blob/main/pictures/power_box.jpg" width="500">
 
@@ -172,11 +174,11 @@ Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90
 
 Here is an overall power wiring diagram. 
 ```mermaid
-graph TD    
+%%{ init: { "theme": "dark", "layout": "elk" } }%%
+graph TD
     PowerBox[Power Box] --> XT90[XT90]
     XT90 --> T0( )
     XT90 --> ODrive0[ODrive 0]
-    
     T0 --> T1( )
     T0 --> T2( )
     T1 --> ODrive1[ODrive 1]
@@ -192,9 +194,11 @@ graph TD
 > Each line in the diagram represents both postive and negative wires, and each empty square represents a `T Tap Connector`.
 
 ## Mechanical
-Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
-Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
-Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
+
+
+
+
+
 
 ### Primary Actuators
 These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308` BLDC motor mated to a `9:1 planetary gearbox`. These come in 2 flavors: `single bearing` and `double bearing`.  
