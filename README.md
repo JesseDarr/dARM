@@ -174,7 +174,7 @@ Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90
 
 Here is an overall power wiring diagram. 
 ```mermaid
-%%{ init: { "theme": "dark", "layout": "elk" } }%%
+%%{ init: { "flowchart": { "defaultRenderer": "elk" } } }%%
 graph TD
     PowerBox[Power Box] --> XT90[XT90]
     XT90 --> T0( )
