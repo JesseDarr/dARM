@@ -166,10 +166,11 @@ Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90
 
 Here is an overall power wiring diagram. 
 ```mermaid
-graph LR    
+graph TD    
     PowerBox[Power Box] --> XT90[XT90]
-    XT90 --> ODrive0[ODrive 0]
     XT90 --> T0( )
+    XT90 --> ODrive0[ODrive 0]
+    
     T0 --> T1( )
     T0 --> T2( )
     T1 --> ODrive1[ODrive 1]
