@@ -172,6 +172,8 @@ Wiring a robot arm is difficult.  Wiring is all custom length, and measured afte
 
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
+Here is an overall power wiring diagram. 
+
 <script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs"
   import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@latest/dist/mermaid-layout-elk.esm.min.mjs"
@@ -182,25 +184,24 @@ Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90
   // then render the diagrams as usual
   mermaid.initialize({ startOnLoad: true })
 </script>
+<pre class="mermaid">
+  %%{ init: { "flowchart": { "defaultRenderer": "elk" } } }%%
 
-Here is an overall power wiring diagram. 
-```mermaid
-%%{ init: { "flowchart": { "defaultRenderer": "elk" } } }%%
-graph TD
-    PowerBox[Power Box] --> XT90[XT90]
-    XT90 --> T0( )
-    XT90 --> ODrive0[ODrive 0]
-    T0 --> T1( )
-    T0 --> T2( )
-    T1 --> ODrive1[ODrive 1]
-    T1 --> ODrive2[ODrive 2]
-    T2 --> ODrive3[ODrive 3]
-    T2 --> T3( )
-    T3 --> ODrive4[ODrive 4]
-    T3 --> ODrive5[ODrive 5]
-    ODrive5 --> ODrive6[ODrive 6]
-    ODrive6 --> ODrive7[ODrive 7]
-```
+    graph TD
+        PowerBox[Power Box] --> XT90[XT90]
+        XT90 --> T0( )
+        XT90 --> ODrive0[ODrive 0]
+        T0 --> T1( )
+        T0 --> T2( )
+        T1 --> ODrive1[ODrive 1]
+        T1 --> ODrive2[ODrive 2]
+        T2 --> ODrive3[ODrive 3]
+        T2 --> T3( )
+        T3 --> ODrive4[ODrive 4]
+        T3 --> ODrive5[ODrive 5]
+        ODrive5 --> ODrive6[ODrive 6]
+        ODrive6 --> ODrive7[ODrive 7]
+</pre>
 > :bulb: **Note:**
 > Each line in the diagram represents both postive and negative wires, and each empty square represents a `T Tap Connector`.
 
