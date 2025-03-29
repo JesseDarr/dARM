@@ -172,6 +172,17 @@ Wiring a robot arm is difficult.  Wiring is all custom length, and measured afte
 
 Wiring is also facilitated by `T Tap Connectors`.  These provide a T split at 90° and makes wiring much easier.  You can find them in the BOM.  Zip tie 2 of them bottom to bottom to handle both the positive and negative wires.  
 
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs"
+  import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@latest/dist/mermaid-layout-elk.esm.min.mjs"
+
+  // register ELK
+  mermaid.registerLayoutLoaders(elkLayouts)
+
+  // then render the diagrams as usual
+  mermaid.initialize({ startOnLoad: true })
+</script>
+
 Here is an overall power wiring diagram. 
 ```mermaid
 %%{ init: { "flowchart": { "defaultRenderer": "elk" } } }%%
