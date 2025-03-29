@@ -10,20 +10,26 @@ After iterating through various designs, modularity and maintenence became top p
 ## Table of Contents
 1. [Versions](#versions)
 2. [Inspirations](#inspirations)
-    - [James Burton](#james-burton)
-    - [Skyentific](#Skyentific)
-    - [OpenQDD](#openqdd)
-    - [SSG48 Gripper](#ssg48-gripper)
-3. [Design](#design)
-    - [Control](#control)
-        - [Pi](#pi)
-        - [CAN Wiring](#can-wiring)
-    - [Power](#power)
-    - [Mechanical](#mechanical)
-        - [Primary Actuators](#primary-actuators)
-        - [Forearm and Differential](#forearm-and-differential)
-        - [Gripper](#gripper)
-4. [Assembly](#assembly)
+   - [James Burton](#james-burton)
+   - [Skyentific](#skyentific)
+   - [OpenQDD](#openqdd)
+   - [SSG48 Gripper](#ssg48-gripper)
+3. [Control](#control)
+   - [Pi](#pi)
+     - [Enable CAN Communication](#enable-can-communication)
+     - [CAN Service](#can-service)
+     - [Clone git repo](#clone-git-repo)
+     - [Game Controllers](#game-controllers)
+   - [CAN Wiring](#can-wiring)
+4. [Power](#power)
+   - [Power Box](#power-box)
+   - [Power Wiring](#power-wiring)
+5. [Mechanical](#mechanical)
+   - [Primary Actuators](#primary-actuators)
+   - [Forearm and Differential](#forearm-and-differential)
+   - [Gripper](#gripper)
+6. [Assembly](#assembly)
+
 
 ## Versions
 Version numbers are determined purely by emotion. Don't ask what SDE stands for.
@@ -191,7 +197,7 @@ Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes h
 Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. Blurb goes here. 
 
 ### Primary Actuators
-These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308 BLDC` motor mated to a 9:1 planetary gearbox. These come in 2 flavors: `single bearing` and `double bearing`.  
+These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308` BLDC motor mated to a `9:1 planetary gearbox`. These come in 2 flavors: `single bearing` and `double bearing`.  
 
 Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
