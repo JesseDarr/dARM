@@ -194,14 +194,39 @@ graph TD
 > Each line in the diagram represents both postive and negative wires, and each empty square represents a `T Tap Connector`.
 
 ## Mechanical
+The dARM sits on top of a base made of 6 legs each holding a 5lb weight to provide a solid base.  
 
+Joints 0–3 provide a single axis of rotation each and are powered by the primary actuators. Joint 1 carries the highest load and uses a dual-motor setup to provide the necessary torque. 
 
+The forearm uses two motors connected through a two-stage belt system to drive a differential, enabling two independent axes of rotation. 
 
-
-
+The gripper uses a single motor to drive a pair of `Compliant TPU fingers`.
 
 ### Primary Actuators
-These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308` BLDC motor mated to a `9:1 planetary gearbox`. These come in 2 flavors: `single bearing` and `double bearing`.  
+These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308` BLDC motor mated to a `9:1 planetary gearbox`. 
+
+| Layer Height          | 0.16 mm   |
+| --------------------- | --------- |
+| Planet Height         | 10.24 mm  |
+| Ring Height           | 12.24 mm  |
+| Sun Height            | 12.24 mm  |
+| Layer Count           | 64        |
+| Helical Angle         | 15        |
+| Pressure Angle        | 25        |
+| Module                | 1.4       |
+| Min Teeth             | 9         |
+| Sun Teeth             | 8         |
+| Planet Teeth          | 28        |
+| Ring Teeth            | 64        |
+| Ring Radial Thickness | 4.8 mm    |
+
+
+
+
+
+
+
+These come in 2 flavors: `single bearing` and `double bearing`.  
 
 Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
@@ -216,11 +241,36 @@ https://github.com/user-attachments/assets/06c78a0a-1a54-4e00-952e-c247763e0280
 https://github.com/user-attachments/assets/b43786ba-b51d-407c-8697-83d8e092f9be
 
 ### Forearm and Differential
+| Bevel Gear Teeth | 26  |
+| ---------------- | --- |
+| Large Pulley     | 72  |
+| Small Pulley     | 12  |
+
 
 https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 
 ### Gripper
+| Module         | 1.4     |
+| -------------- | ------- |
+| Pressure Angle | 30      |
+| Gear Teeth     | 8       |
+| Gear Height    | 11.2 mm |
+| Rack Heigh     | 7.7 mm  |
+| Rack Depth     | 4 mm    |
+| Rack Teeth     | 14      |
+| Helic Mode     | normal  |
 
 https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
 ## Assembly
+| Bolt | Hole Size |
+| ---- | --------- |
+| M3   | 3.4 mm    |
+| M4   | 4.4 mm    |
+
+
+
+### Oversized Things
+ - Carrier outer diameter 75 + 0.2 mm
+ - Carrier shafts diameter 12 + 0.05 mm
+ - Sun gear shaft diameter 8 + 0.1 mm
