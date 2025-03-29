@@ -205,28 +205,14 @@ The gripper uses a single motor to drive a pair of `Compliant TPU fingers`.
 ### Primary Actuators
 These are the modular building blocks of joints 0-3. Each actuator use an `Eagle Power 8308` BLDC motor mated to a `9:1 planetary gearbox`. 
 
-| Layer Height          | 0.16 mm   |
-| --------------------- | --------- |
-| Planet Height         | 10.24 mm  |
-| Ring Height           | 12.24 mm  |
-| Sun Height            | 12.24 mm  |
-| Layer Count           | 64        |
-| Helical Angle         | 15        |
-| Pressure Angle        | 25        |
-| Module                | 1.4       |
-| Min Teeth             | 9         |
-| Sun Teeth             | 8         |
-| Planet Teeth          | 28        |
-| Ring Teeth            | 64        |
-| Ring Radial Thickness | 4.8 mm    |
+The gear box uses a `helical angle of 15°`, a `pressure angle of 15°`, and a `module of 1.4 mm`.  Here are the tooth counts:
+| Gear   | Count |
+|--------|----|
+| Sun    | 8  |
+| Planet | 28 |
+| Ring   | 64 |
 
-
-
-
-
-
-
-These come in 2 flavors: `single bearing` and `double bearing`.  
+The `primary actuators` come in 2 flavors: `single bearing` and `double bearing`.  
 
 Double bearing actuators handle load perpendicular to the rotation axis better. They are used in joints that rotates on the vertical axis. 
 
@@ -268,7 +254,14 @@ https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 | M3   | 3.4 mm    |
 | M4   | 4.4 mm    |
 
+Sanding
+Fitting parts together
+How tight to tigheten bolts
+Glueing in nuts
+Bottom Up
+Different motor plates, keep track of them
 
+Motor > Motor Plate > Bearing Holder > Carrier and rest of actuator > odrive last
 
 ### Oversized Things
  - Carrier outer diameter 75 + 0.2 mm
