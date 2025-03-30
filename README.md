@@ -26,7 +26,7 @@ After iterating through various designs, modularity and maintenence became top p
    - [Power Wiring](#power-wiring)
 5. [Mechanical](#mechanical)
    - [Primary Actuators](#primary-actuators)
-   - [Forearm and Differential](#forearm-and-differential)
+   - [Forearm](#forearm)
    - [Gripper](#gripper)
 6. [Assembly](#assembly)
 7. [Links](#links)
@@ -226,7 +226,7 @@ https://github.com/user-attachments/assets/06c78a0a-1a54-4e00-952e-c247763e0280
 
 https://github.com/user-attachments/assets/b43786ba-b51d-407c-8697-83d8e092f9be
 
-### Forearm and Differential
+### Forearm
 The forearm uses two `GB36-2` BLDC motors connected through a pulley system to drive a differential.  
 
 The pulley system consists of two-stages.  Each uses `20 tooth` and `72 tooth`pulleys connected via a `300 mm GT2 belt`.  This provides a ratio of `3.6:1` per stage and a final drive ratio of `12.96:1`
@@ -237,11 +237,11 @@ Interestingly, this means both motors are in use for every movement the differen
 
 The differential uses `Zerol Bevel Gears` made with [Bevel Gear Maker](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2427789559362467821&appLang=en&os=Win64).  They pinion and wheel gears each have `38 teeth` for a final ratio of `1:1`.  Other measurements needed to reproduce the gears:
 
-| Parameter | Value |
-|-----------|-------|
-| Module    | 1.6 mm | 
-| Pressure Angle | 25° 
-| Face Width | 14 mm | |
+| Parameter        | Value  |
+|------------------|--------|
+| Module           | 1.6 mm | 
+| Pressure Angle   | 25°    |
+| Face Width       | 14 mm  |
 | Clearance Factor | 0.3 mm | 
 
 Below is an explode animation for the forearm.
