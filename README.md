@@ -28,6 +28,7 @@ After iterating through various designs, modularity and maintenence became top p
    - [Primary Actuators](#primary-actuators)
    - [Forearm](#forearm)
    - [Gripper](#gripper)
+   - [Pillars](#pillars)
 6. [Assembly](#assembly)
 7. [Links](#links)
 
@@ -244,26 +245,33 @@ The differential uses `Zerol Bevel Gears` made with [Bevel Gear Maker](https://a
 | Face Width       | 14 mm  |
 | Clearance Factor | 0.3 mm | 
 
-Below is an explode animation for the forearm.
+Below is an explode animation for the forearm:
 
 https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 
 ### Gripper
-| Module         | 1.4     |
-| -------------- | ------- |
-| Pressure Angle | 30      |
+The gripper uses a `GM5208-24` BLDC motor to drive a `rack and pinion` to articulate the `Compliant TPU Fingers` which ride along a `MGN7C rail`.
+
+The compliant nature of the fings as well as the rubbery TPU allow the fingers to change shape as they come in contact with an object.  They form around the object to provide a better grip.  The gripping surface is printed with `fuzzy skin` to provide additional friction.
+
+The rack and pinion system has the following parameters:
+
+| Parameter      | Value   |
+|----------------|---------|
+| Module         | 1.4 mm  |
+| Pressure Angle | 30°     |
 | Gear Teeth     | 8       |
+| Rack Teeth     | 10      |
 | Gear Height    | 11.2 mm |
 | Rack Heigh     | 7.7 mm  |
-| Rack Depth     | 4 mm    |
-| Rack Teeth     | 14      |
-| Helic Mode     | normal  |
+
+Below is an explode animation of the gripper:
+
+https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
 ### Pillars
 
 Explain why they are used, why they are better than a connected case.  air flow, looks cool, sheer force??? (find that video explination of bolted plates).  rigid connecting points for carrier adapters.
-
-https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
 ## Assembly
 | Bolt | Hole Size |
