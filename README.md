@@ -244,7 +244,7 @@ The differential uses `Zerol Bevel Gears` made with [Bevel Gear Maker](https://a
 | Face Width | 14 mm | |
 | Clearance Factor | 0.3 mm | 
 
-Below is an exploded animation for the forearm.
+Below is an explode animation for the forearm.
 
 https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 
