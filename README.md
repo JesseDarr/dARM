@@ -259,6 +259,10 @@ https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 | Rack Teeth     | 14      |
 | Helic Mode     | normal  |
 
+### Pillars
+
+Explain why they are used, why they are better than a connected case.  air flow, looks cool, sheer force??? (find that video explination of bolted plates).  rigid connecting points for carrier adapters.
+
 https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
 ## Assembly
