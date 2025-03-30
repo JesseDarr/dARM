@@ -29,7 +29,7 @@ After iterating through various designs, modularity and maintenence became top p
    - [Forearm and Differential](#forearm-and-differential)
    - [Gripper](#gripper)
 6. [Assembly](#assembly)
-
+7. [Links](#links)
 
 ## Versions
 Version numbers are determined purely by emotion. Don't ask what SDE stands for.
@@ -227,11 +227,24 @@ https://github.com/user-attachments/assets/06c78a0a-1a54-4e00-952e-c247763e0280
 https://github.com/user-attachments/assets/b43786ba-b51d-407c-8697-83d8e092f9be
 
 ### Forearm and Differential
-| Bevel Gear Teeth | 26  |
-| ---------------- | --- |
-| Large Pulley     | 72  |
-| Small Pulley     | 12  |
+The forearm uses two `GB36-2` BLDC motors connected through a pulley system to drive a differential.  
 
+The pulley system consists of two-stages.  Each uses `20 tooth` and `72 tooth`pulleys connected via a `300 mm GT2 belt`.  This provides a ratio of `3.6:1` per stage and a final drive ratio of `12.96:1`
+
+The motors oppose each other.  If they are driven in opposite directions then the differential will `bend` along the `X axis`.  If they are driven in the same direction then the differential will `twist` along the `Z axis`.  
+
+Interestingly, this means both motors are in use for every movement the differential makes.  So the final drive ratio approaches a `potential maximum` of approximately `26:1`.
+
+The differential uses `Zerol Bevel Gears` made with [Bevel Gear Maker](https://apps.autodesk.com/FUSION/en/Detail/Index?id=2427789559362467821&appLang=en&os=Win64).  They pinion and wheel gears each have `38 teeth` for a final ratio of `1:1`.  Other measurements needed to reproduce the gears:
+
+| Parameter | Value |
+|-----------|-------|
+| Module    | 1.6 mm | 
+| Pressure Angle | 25° 
+| Face Width | 14 mm | |
+| Clearance Factor | 0.3 mm | 
+
+Below is an exploded animation for the forearm.
 
 https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 
