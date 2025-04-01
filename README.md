@@ -14,6 +14,7 @@ After iterating through various designs, modularity and maintenence became top p
    - [Skyentific](#skyentific)
    - [OpenQDD](#openqdd)
    - [SSG48 Gripper](#ssg48-gripper)
+   - [Gary McLendon](#gary-mclendon)
 3. [Control](#control)
    - [Pi](#pi)
      - [Enable CAN Communication](#enable-can-communication)
@@ -34,6 +35,7 @@ After iterating through various designs, modularity and maintenence became top p
    - [Glue](#glue)
    - [Bottom Up](#bottom-up)
    - [Motor Plates](#motor-plates)
+   - [Brake Resistors](#brake-resistors)
 7. [Links](#links)
 
 ## Versions
@@ -61,6 +63,9 @@ The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has
 
 #### [SSG48 Gripper](https://source-robotics.github.io/SSG48-gripper-docs/page1_about_the_gripper)
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
+
+#### Gary McLendon
+Gary is an excellent electrical engineer, former owner of `GCM Computers`, and my former boss.  I want to thank Gary for the learning environment he provided me for nearly a decade un his employee.  I also want to thank him for the advice on the power system for the dARM.
 
 ## Control
 The dARM is controlled with a `Raspberry Pi 4b` communicating to eight `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
@@ -322,6 +327,9 @@ The `double bearing primary actuators` are the same as above save the additional
 There are several different motor plates.  They look mostly identical, but they are not.  There are small 1mm tall arcs used to guide our pillars into place since they have an offset bolt hole in them.  These arcs differ from actuator to actuator depending on a few factors.
 
 The dARM.3mf file has the different motor plates clearly labeled.  Be sure to keep track of them or it will come at the price of disassembly/reassembly.
+
+### Brake Resistors
+Although they are not seen in any fo the CAD, all 5 primary actuators uses a `2 ohm brake resistor`.  Wiring instructions can be found on in the ODrive documentation.  Zip tie them to the standoffs holding the ODrive on the respective actuator.
 
 ## Links
 Below is a list of useful links:
