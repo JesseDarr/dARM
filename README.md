@@ -30,6 +30,10 @@ After iterating through various designs, modularity and maintenence became top p
    - [Gripper](#gripper)
    - [Pillars](#pillars)
 6. [Assembly](#assembly)
+   - [Sanding](#sanding)
+   - [Glue](#glue)
+   - [Bottom Up](#bottom-up)
+   - [Motor Plates](#motor-plates)
 7. [Links](#links)
 
 ## Versions
@@ -270,25 +274,61 @@ Below is an explode animation of the gripper:
 https://github.com/user-attachments/assets/7afa1675-455d-4928-a6e3-7bdbb0bead69
 
 ### Pillars
+Pillars are everywhere.  They are used to connect the legs to joint 0, they are used in all 5 of the primary actuators, and they are used again in the gripper.
 
-Explain why they are used, why they are better than a connected case.  air flow, looks cool, sheer force??? (find that video explination of bolted plates).  rigid connecting points for carrier adapters.
+They provide open space around the motors for improved air flow. A pair of them can be replaced with an adapter to provide sturdy connection point to other parts of the robot.
+
+The strength of the pillars is a function of their cross sectional area.  This is used to our advantage by offsetting the bolt holes in the pillars in the primary actuators.  This allows for the total actuator diameter to be reduced by a few milimeters.
 
 ## Assembly
-| Bolt | Hole Size |
-| ---- | --------- |
-| M3   | 3.4 mm    |
-| M4   | 4.4 mm    |
+This section is a collection of tips for assembling the robot.
 
-Sanding
-Fitting parts together
-How tight to tigheten bolts
-Glueing in nuts
-Bottom Up
-Different motor plates, keep track of them
+### Sanding
+Some sanding is required, specifically anywhere a bearing will touch a printed part.  All bearings should be difficult to press fit into its coresponding part, but not too difficult as to deform the geometry of the part.  To achieve this type of fit sanding with `150 grit` sand paper is necessary.  Be paitent.  Sand, test fit, sand, test fit, sand, test fit, over and over.
 
-Motor > Motor Plate > Bearing Holder > Carrier and rest of actuator > odrive last
+Additionally if there are any blemishes on the mating surface of 2 printed parts they should be sanded flat.
 
-### Oversized Things
- - Carrier outer diameter 75 + 0.2 mm
- - Carrier shafts diameter 12 + 0.05 mm
- - Sun gear shaft diameter 8 + 0.1 mm
+### Glue
+`CA glue`, otherwise known as `Super glue`, works wonders with PLA.  There is a nice little write up of the subject [here](https://www.instructables.com/Testing-the-Best-Glue-for-PLA-3D-Printed-Parts/).
+
+It is recommended to glue in all nuts that are slotted in.  Not only does it ensure they won't fall out during assembly or maintenance, it also makes it much more difficult for a nut to "strip" the surounding PLA.
+
+### Bottom Up
+The modular units of the dARM should each be fully assembled first.  These units are:
+ - Legs
+ - Joint 0
+ - Joint 1
+ - Joint 2
+ - Joint 3
+ - Forearm
+ - Gripper
+
+Once these units are assembled piece them together from the bottom up.  It is recommended to pause building and to test all joints after each new joint is added to the robot.  `console.py` is perfect for this as it will dynamically add additional control sliders to the interface as additional ODrives are added to the network.
+
+The `single bearing primary actuators` should be assembled in this order:
+- Mount the `motor` to the `motor plate` (don't forget the magenet holder)
+- Attach the `sun gear` to the `motor`
+- Insert the `large bearing` into the `bearing holder`
+- Build the `carrier base` around the `large bearing`
+- Attach the `bearing holder` to the `motor plate` via the `pillars`
+- Place the `ring gear` on top of the `bearing holder`
+- Insert the `planet gears` onto the posts of the `bearing holder`
+- Attach the `cover plate` and bolt the entire assembly together
+- Attach the `carrier top` or `carrier adapter` depending on the joint
+
+The `double bearing primary actuators` are the same as above save the additional step of placing the second `bearing holder` on top of the `ring gear` before attaching the `cover plate`.
+
+### Motor Plates
+There are several different motor plates.  They look mostly identical, but they are not.  There are small 1mm tall arcs used to guide our pillars into place since they have an offset bolt hole in them.  These arcs differ from actuator to actuator depending on a few factors.
+
+The dARM.3mf file has the different motor plates clearly labeled.  Be sure to keep track of them or it will come at the price of disassembly/reassembly.
+
+## Links
+Below is a list of useful links:
+
+- [Ubuntu on PI](https://roboticsbackend.com/install-ubuntu-on-raspberry-pi-without-monitor/)
+- [ODrive Configuration UI](https://gui.odriverobotics.com/configuration)
+- [ODrive Documentation](https://docs.odriverobotics.com/v/latest/guides/getting-started.html)
+- [ODrive Motor Tuning](https://docs.odriverobotics.com/v/latest/guides/tuning.html#tuning)
+- [Planetary Gear Calculator](https://planetarygenerator.mateuszdrwal.com/)
+- [Rack and Pinion Calculator](https://www.otvinta.com/rack.html)
