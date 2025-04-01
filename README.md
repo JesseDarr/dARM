@@ -76,7 +76,7 @@ In a CAN network, the controller does not require a node ID, but each device on 
 The Pi is currently running `Ubuntu 22.04 Server`, but everything should still work with newer versions.  Instructions for installing Ubuntu on a Pi can be found [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview).  Set the hostname to `pidarm` and the username to `darm`.  It is also recommened to set a `static IP address` so it can be easily accessed via SSH.
 
 #### Enable CAN Communication
-The CAN Hat communicates to our ODrives, but it must also communicate to the Pi.  This is done through a `Serial Peripheral Interface (SPI)`. To enable the interface edit `/boot/firmware/config.txt` and add teh following at the bottom of the file:
+The CAN Hat communicates to our ODrives, but it must also communicate to the Pi.  This is done through a `Serial Peripheral Interface (SPI)`. To enable the interface edit `/boot/firmware/config.txt` and add the following at the bottom of the file:
 ```
 dtparam=spi=on 
 dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25 
