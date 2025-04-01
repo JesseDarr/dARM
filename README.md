@@ -65,7 +65,7 @@ The basis for the primary actuators are the OpenQDD by Aaed Musa.  Aaed also has
 The basis for the gripper is the SSG48 project.  We use a different motor, controller, and mounting dimensions, but we keep the basic motor housing layout, MGN7C rail/carriers, and a rack and pinion to move the fingers.
 
 #### Gary McLendon
-Gary is an excellent electrical engineer, former owner of `GCM Computers`, and my former boss.  I want to thank Gary for the learning environment he provided me for nearly a decade un his employee.  I also want to thank him for the advice on the power system for the dARM.
+Gary is an excellent electrical engineer, former owner of `GCM Computers`, and my former boss.  I want to thank Gary for the learning environment he provided me for nearly a decade under his employee.  I also want to thank him for the advice on the power system for the dARM.
 
 ## Control
 The dARM is controlled with a `Raspberry Pi 4b` communicating to eight `ODrive S1s` via `CAN bus`.  This is achieved with the help of an `RS485 CAN Hat` on the Pi.  The ODrives are using the built in encoder with `encoder magnets` attached to each motor.
