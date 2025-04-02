@@ -261,7 +261,7 @@ https://github.com/user-attachments/assets/69bd7a27-f76a-4634-a556-fa9e3ffe39f6
 ### Gripper
 The gripper uses a `GM5208-24` BLDC motor to drive a `rack and pinion` to articulate the `Compliant TPU Fingers` which ride along a `MGN7C rail`.
 
-The compliant nature of the fings as well as the rubbery TPU allow the fingers to change shape as they come in contact with an object.  They form around the object to provide a better grip.  The gripping surface is printed with `fuzzy skin` to provide additional friction.
+The compliant nature of the fingers as well as the rubbery TPU allow the fingers to change shape as they come in contact with an object.  They form around the object to provide a better grip.  The gripping surface is printed with `fuzzy skin` to provide additional friction.
 
 The rack and pinion system has the following parameters:
 
