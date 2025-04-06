@@ -5,6 +5,8 @@ https://github.com/user-attachments/assets/527a8380-1c22-4416-9524-2030928b34a5
 
 So the dARM journey began. The goal was to design a cheap, powerful, robust, modular, and easily maintained arm from scratch using `ODrive S1` BLDC controllers.  It stands `.975 meters` tall and can easily hold `5 lbs` in the horizontal position.
 
+https://github.com/user-attachments/assets/cb6a208b-52ac-4bd4-9993-00c22c082488
+
 After iterating through various designs, modularity and maintenence became top priorities.  If any individual component fails, its modular section can be removed from the larger arm for easy replacement.
 
 ## Table of Contents
