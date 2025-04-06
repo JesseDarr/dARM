@@ -7,7 +7,7 @@ So the dARM journey began. The goal was to design a cheap, powerful, robust, mod
 
 https://github.com/user-attachments/assets/cb6a208b-52ac-4bd4-9993-00c22c082488
 
-After iterating through various designs, modularity and maintenence became top priorities.  If any individual component fails, its modular section can be removed from the larger arm for easy replacement.
+After iterating through various designs, modularity and maintenance became top priorities.  If any individual component fails, its modular section can be removed from the larger arm for easy replacement.
 
 ## Table of Contents
 1. [Versions](#versions)
