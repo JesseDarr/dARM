@@ -41,13 +41,14 @@ After iterating through various designs, modularity and maintenence became top p
 ## Versions
 Version numbers are determined purely by emotion. Don't ask what SDE stands for.
 
-| Version   | Date          | Notes                             |
-|---        | ---           | ---                               |
-| 0.35 SDE  | 12/28/2024    | 6 axis, 7 motor design            |
-| 0.45 SDE  | 1/17/2025     | Gripper v2 added                  |
-| 0.55 SDE  | 1/28/2025     | Power box added                   |
-| 0.56 SDE  | 3/15/2025     | New gripper motor magnet holder   | 
-| 0.59 SDE  | 3/24/2025     | Dock and finger v4 added          | 
+| Version   | Date          | Notes                                   |
+|---        | ---           | ---                                     |
+| 0.35 SDE  | 12/28/2024    | 6 axis, 7 motor design                  |
+| 0.45 SDE  | 1/17/2025     | Gripper v2 added                        |
+| 0.55 SDE  | 1/28/2025     | Power box added                         |
+| 0.56 SDE  | 3/15/2025     | New gripper motor magnet holder         | 
+| 0.59 SDE  | 3/24/2025     | Dock and finger v4 added                |
+| 0.60 SDE  | 4/5/2025      | Gripper gear/magenet holder integration |   
 
 ## Inspirations
 Without the below projects and youtube channels the dARM project wouldn't exist.  I can't thank them enough for the inspiration and advice they've provided.
