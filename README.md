@@ -1,4 +1,4 @@
-# dARM (dynamic Arm for Robitc Mischief)
+# dARM (dynamic Arm for Robotic Mischief)
 dARM is a 3d printed 6 DOF robotic arm. Initially, I wanted to build a 3d printed arm as a test of my new `Bambu X1C`. I found most existing projects used stepper motors.  I wanted a better power density.
 
 https://github.com/user-attachments/assets/527a8380-1c22-4416-9524-2030928b34a5
