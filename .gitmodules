@@ -2,3 +2,6 @@
 	path = odrive_tools
 	url = https://github.com/JesseDarr/dARM_odrive_tools.git
 	branch = main
+[submodule "ros2_pkg"]
+	path = ros2_pkg
+	url = https://github.com/JesseDarr/dARM_ros2.git
