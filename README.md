@@ -51,7 +51,8 @@ Version numbers are determined purely by emotion. Don't ask what SDE stands for.
 | 0.56 SDE  | 3/15/2025     | New gripper motor magnet holder         | 
 | 0.59 SDE  | 3/24/2025     | Dock and finger v4 added                |
 | 0.60 SDE  | 4/5/2025      | Gripper gear/magenet holder integration |   
-| 0.62 SDE  | 5/2/2025      | ROS2 package published in submodule     |   
+| 0.62 SDE  | 5/2/2025      | ROS2 pkg: published in submodule        |   
+| 0.70 SDE  | 6/22/2025     | ROS2 pkg: teleop node and refined URDF  |   
 
 ## Inspirations
 Without the below projects and youtube channels the dARM project wouldn't exist.  I can't thank them enough for the inspiration and advice they've provided.
